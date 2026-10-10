@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subscribe – Stripe Embedded Checkout</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Subscribe to Plan</h1>
+    <p class="subtitle">Enter your email address to start the embedded checkout session.</p>
+
+    <form id="email-form" novalidate>
+      <label for="email-input">Email address</label>
+      <input
+        id="email-input"
+        name="email"
+        type="email"
+        placeholder="you@example.com"
+        required
+        autocomplete="email"
+      />
+      <button id="submit-btn" type="submit">Continue to Checkout</button>
+    </form>
+
+    <div id="error-message" class="error-banner hidden" role="alert"></div>
+
+    <div id="checkout"></div>
+  </main>
+
+  <script src="/checkout.js"></script>
+</body>
+</html>

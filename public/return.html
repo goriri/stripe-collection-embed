@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subscription Status – Stripe Embedded Checkout</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Subscription Status</h1>
+
+    <div id="loading">Checking payment status...</div>
+
+    <section id="success" class="success-banner hidden">
+      <p>
+        Thank you for subscribing! A confirmation and receipt will be sent to
+        <strong id="customer-email"></strong>.
+      </p>
+      <p>Payment status: <span id="payment-status"></span></p>
+    </section>
+
+    <div id="error-message" class="error-banner hidden" role="alert"></div>
+
+    <a href="/" class="back-link">Back to Checkout</a>
+  </main>
+
+  <script src="/return.js"></script>
+</body>
+</html>
